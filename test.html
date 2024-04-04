@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagonal Grid</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+
+  .grid-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(45deg);
+  }
+
+  .grid {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: #fff;
+    opacity: 0.5; /* 격자의 투명도 조절 */
+  }
+
+  /* 수평선 */
+  .grid.horizontal {
+    top: 0;
+    left: -10px; /* 격자 간격 조절 */
+  }
+
+  /* 수직선 */
+  .grid.vertical {
+    top: -10px; /* 격자 간격 조절 */
+    left: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="grid-container">
+    <!-- 수평선 생성 -->
+    <div class="grid horizontal"></div>
+    <!-- 수직선 생성 -->
+    <div class="grid vertical"></div>
+  </div>
+</body>
+</html>
